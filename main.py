@@ -33,10 +33,6 @@ def predict_metrics():
     lr = linear_model.LinearRegression()
     lr.fit(dates, values)
     
-    date = "2022-08-28 18:46:47.857"
-    date2 = "2022-09-30 18:46:47.857"
-    dateMS = timeStringToMicroSeconds(date)
-    dateMS2 = timeStringToMicroSeconds(date2)
     futureDates = futureDateRange(convertMicroSecondsToTime(list(dates[2])[-1]))
     fdMicroSecondsArray = np.array(list(map(timeStringToMicroSeconds, futureDates)));
     reshapedFDArray = fdMicroSecondsArray.reshape(fdMicroSecondsArray.size, 1)

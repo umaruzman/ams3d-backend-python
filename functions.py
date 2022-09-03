@@ -21,11 +21,11 @@ def convertMicroSecondsToTime(microseconds):
     return datetime.fromtimestamp(s) - timedelta(days=1)
 
 def futureDateRange(start):
-    start = start + timedelta(days=1)
+    actualStart = start + timedelta(days=2)
     periods = 30
     daterange = []
     for day in range(periods):
-        date = (start + timedelta(days = day)).strftime("%Y-%m-%d %H:%M:%S.%f")
+        date = (actualStart + timedelta(days = day)).strftime("%Y-%m-%d %H:%M:%S.%f")
         daterange.append(date)
     print(daterange)
     return daterange
