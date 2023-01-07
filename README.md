@@ -1,4 +1,4 @@
-#AMS3D Frecasting
+# AMS3D Frecasting
 
 This is a Python application, created using SKLEARN and Flask used for Forecasting.
 
